@@ -6,7 +6,7 @@ st.set_page_config(
     page_icon="🔑",
     layout="centered"
 )
- 
+# تعديل 
 st.title("EmlakHub - تسجيل الدخول")
 
 # نموذج تسجيل الدخول
