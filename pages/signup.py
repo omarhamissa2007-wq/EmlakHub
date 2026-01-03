@@ -1,11 +1,7 @@
 import streamlit as st
 
 
-st.set_page_config(
-    page_title="EmlakHub - SignUp",
-    page_icon="📝",
-    layout="centered"
-    )
+st.set_page_config(page_title="EmlakHub - SignUp", page_icon="📝", layout="centered")
 
 st.title("إنشاء حساب جديد")
 
@@ -26,7 +22,8 @@ if submit_button:
     else:
         st.success("تم إنشاء الحساب بنجاح!")
         st.session_state.logged_in = True
-        st.switch_page("pages/home.py")
+        st.session_state.email = email
+        st.switch_page("pages/gallery.py")
 
 if st.button("لديك حساب بالفعل؟ تسجيل الدخول"):
     st.switch_page("pages/login.py")

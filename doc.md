@@ -1,27 +1,25 @@
 # technical document
 
-### feature
-
-- listing product
-- data about product
-- nofications via whatapp and email
-- rent home
-- Buy Properties
--  Property Management
-- Provide the best properties about your home
-- The client downloads it then signs it and uploads it.
+### Features
+- **Listing Properties**: Browse a gallery of available homes and villas.
+- **Property Details**: View comprehensive data about each product.
+- **Notifications**: Automated confirmations via WhatsApp and Email for contracts and uploads.
+- **Rent/Buy**: Options for renting and buying homes.
+- **Post Property**: Users can upload their own properties (requires login).
+- **Property Management**: Admin/User dashboard for managing listings.
+- **Contracts**: Download, sign, and upload contracts securely.
 
 ## techologies
 ### language
 - python
 
-### libraries
-- streamlit (user intraface)
--  PIL (image)
-- smtplib (email)
-- os (file path)
-- MIMEText (email)
-- MIMEMultipart (email)
+### Libraries
+- **streamlit**: User Interface
+- **PIL (Pillow)**: Image processing
+- **smtplib**: Email sending
+- **pywhatkit**: WhatsApp messaging
+- **os**: File system operations
+- **MIMEText/MIMEMultipart**: Email construction
 
 ## Date sources
 - local dicanory
