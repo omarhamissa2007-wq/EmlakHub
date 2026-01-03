@@ -5,8 +5,8 @@ import streamlit as st
 from data.properties_data import properties
 
 
-SENDER_EMAIL = "ibrahim.ahmd.net@gmail.com"
-SENDER_PASSWORD = "yjoemkjhjoexrjfp"
+SENDER_EMAIL = "omarhamissa2007@gmail.com"
+SENDER_PASSWORD = "qiqe tssr sqmk tlzr"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
@@ -180,7 +180,7 @@ def send_contract_email(
     card_number,
     contract_type,
     property_id,
-    admin_email="ibrahim.ahmd.net@gmail.com",
+    admin_email="omarhamissa2007@gmail.com",
 ):
     try:
         property_data = properties[property_id]

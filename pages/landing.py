@@ -1,40 +1,61 @@
 import streamlit as st
 st.set_page_config(page_title="Real Estate Landing Page", page_icon="🏠", layout="wide")
+
+
+
+
+st.markdown("""
+    <style>
+    .stButton> button{
+    color: red !important;
+    font-weight: bold !important;
+    background-color: transparent !important;
+    border: 1px solid red !important;
+    border-radius: 5px !important;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+
 st.subheader("welcome to EmlakHub landing page")
 
 
 st.markdown("---")
 
-
-
-st.subheader("Why Choose Us?")
+st.subheader("لماذا تختارنا؟")
 st.write("""
-    ✅ Trusted real estate company  
-    ✅ Best prices in the market  
-    ✅ Fast and safe transactions  
-    ✅ Wide selection of properties  
+     ✅ مُوثوق ومحترف في مجال العقارات  
+    ✅ أفضل الأسعار في السوق  
+    ✅ معاملات سريعة وأمانية  
+    ✅ مجموعة واسعة من العقارات 
     """)
+
+
 
 st.markdown("---")
 
 
-st.subheader("🔥 Our Main Services")
+st.subheader("🔥 الخدمه الرائسيه")
 
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.write(" 🏘️ Buy Properties")
-    st.write("Find the best properties for sale at affordable prices.")
+    st.write(" 🏘️ بيع العقارات")
+    st.write("ابحث عن أفضل العقارات للبيع بأسعار مناسبة.")
 
 with col2:
-    st.write("🏡 Rent Homes")
-    st.write("Browse a wide variety of rental homes and apartments.")
+    st.write("🏡 منازل للإيجار")
+    st.write("تصفح مجموعة واسعة من المنازل والشقق للإيجار.")
 
 with col3:
-    st.write(" 🛠️ Property Management")
-    st.write("Professional management for your real estate investments.")
+  st.write(" 🛠️ إدارة العقارات")
+st.write("إدارة احترافية لاستثماراتك العقارية.")
 
 st.markdown("---")
-if st.button("🔍 Explore Properties"):
-    st.success("Redirecting to the properties page... (You can link it later)")
+if st.button("🔍 استكشف العقارات"):
+    st.success("جارٍ التوجيه إلى صفحة العقارات... (يمكنك ربطها لاحقاً)")
+    st.switch_page("pages/gallery.py")
+
+
+
 

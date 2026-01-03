@@ -3,6 +3,17 @@ import os
 from PIL import Image
 from data.properties_data import properties
 
+st.markdown("""
+    <style>
+        .stButton > button {
+            color: #ffd700 !important;
+            font-weight: bold !important;
+            background-color: transparent !important;
+            border: 1px solid #ffd700 !important;
+            border-radius: 5px !important;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
 st.set_page_config(page_title="EmlakHub - Home", page_icon="🏠", layout="wide")
 
