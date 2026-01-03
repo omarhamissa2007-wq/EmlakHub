@@ -8,3 +8,5 @@ venv/
 .env
 .DS_Store
 # Specific data folders
+data/uploads/
+project_structure.md
