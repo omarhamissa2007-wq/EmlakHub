@@ -48,7 +48,7 @@ st.write("We are happy to hear from you anytime:")
 
 st.write("📍 Address: kafr el-shiek, Egypt")
 st.write("📱 Phone: 01015013337")
-st.write("✉️ Email: omarhamissa2007@gmail.com")
+st.write("✉️ Email: emlakhub46@gmail.com")
 
 st.markdown("---")
 
