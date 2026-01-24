@@ -3,8 +3,7 @@
 ### Features
 - **Listing Properties**: Browse a gallery of available homes and villas.
 - **Property Details**: View comprehensive data about each product.
-- **Notifications**: Automated confirmations via WhatsApp and Email for contracts and uploads.
-- **Rent/Buy**: Options for renting and buying homes.
+- **Notifications**: Automated confirmatibuying homes.
 - **Post Property**: Users can upload their own properties (requires login).
 - **Property Management**: Admin/User dashboard for managing listings.
 - **Contracts**: Download, sign, and upload contracts securely.
@@ -12,7 +11,8 @@
 ## techologies
 ### language
 - python
-
+ons via WhatsApp and Email for contracts and uploads.
+- **Rent/Buy**: Options for renting and 
 ### Libraries
 - **streamlit**: User Interface
 - **PIL (Pillow)**: Image processing

@@ -48,7 +48,7 @@ def send_whatsapp_message(
     card_number,
     contract_type,
     property_id,
-    admin_phone="+201008526422",
+    admin_phone="+201015013337",
 ):
     try:
         # Format customer phone number

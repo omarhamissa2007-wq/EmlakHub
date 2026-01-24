@@ -128,7 +128,7 @@ if st.button("إرسال تفاصيل العقد", use_container_width=True):
             card_number=card_number,
             contract_type="ملكية" if contract_type == "ownership" else "إيجار",
             property_id=property_id,
-            use_whatsapp=False,  # WhatsApp disabled
+            use_whatsapp=False,  # WhatsApp enabled
             use_email=True,
         )
 
