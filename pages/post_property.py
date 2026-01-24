@@ -4,7 +4,6 @@ from datetime import datetime
 from data.properties_data import properties
 from notifications import send_upload_confirmation
 
-# تكوين الصفحة
 st.set_page_config(page_title="نشر عقار جديد", page_icon="🏠", layout="wide")
 
 # التحقق من تسجيل الدخول
@@ -15,11 +14,10 @@ if "logged_in" not in st.session_state or not st.session_state.logged_in:
         st.switch_page("pages/login.py")
     st.stop()
 
-# عنوان الصفحة
 st.title("نشر عقار جديد")
 st.markdown("---")
 
-# المسارات
+
 UPLOAD_FOLDER = "data/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
@@ -65,7 +63,6 @@ with st.form("property_form"):
                 ["apartment", "villa"],
                 format_func=lambda x: "شقة" if x == "apartment" else "فيلا",
             )
-            # البريد الإلكتروني للتواصل (تلقائي من تسجيل الدخول)
             default_email = st.session_state.get("email", "")
             contact_email = st.text_input(
                 "البريد الإلكتروني للتواصل", value=default_email
@@ -91,7 +88,6 @@ with st.form("property_form"):
             }
 
             if save_property(property_data, uploaded_image):
-                # إرسال بريد تأكيد
                 if contact_email:
                     send_upload_confirmation(property_data, contact_email)
                 else:

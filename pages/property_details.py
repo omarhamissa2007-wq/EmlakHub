@@ -2,6 +2,7 @@ import streamlit as st
 import os
 from PIL import Image
 from data.properties_data import properties
+from utils import get_image_path
 
 
 st.set_page_config(page_title="EmlakHub - Details", page_icon="🏠", layout="wide")
@@ -26,9 +27,7 @@ else:
         st.subheader("صورة العقار")
 
         try:
-            image_path = os.path.join(
-                os.path.dirname(os.path.dirname(__file__)), property_data["image"]
-            )
+            image_path = get_image_path(property_data["image"])
             img = Image.open(image_path)
             st.image(img, width=600)
         except Exception as e:

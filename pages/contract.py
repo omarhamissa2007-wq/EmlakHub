@@ -3,15 +3,14 @@ import os
 from data.properties_data import properties
 from PIL import Image
 from notifications import send_message
+from utils import get_image_path
 
 
-# إعداد الصفحة
 st.set_page_config(page_title="EmlakHub - Contract", page_icon="📝", layout="wide")
 st.title("📄 Contract")
 st.divider()
 
 
-# التحقق من اختيار العقار
 if (
     "selected_property" not in st.session_state
     or not st.session_state.selected_property
@@ -23,7 +22,6 @@ property_id = st.session_state.selected_property
 property_data = properties[property_id]
 
 
-# عرض بيانات العقار
 col1, col2 = st.columns(2)
 
 with col1:
@@ -54,9 +52,7 @@ with col2:
     st.divider()
 
     try:
-        image_path = os.path.join(
-            os.path.dirname(os.path.dirname(__file__)), property_data["image"]
-        )
+        image_path = get_image_path(property_data["image"])
         img = Image.open(image_path)
         st.image(img, width=600)
     except Exception as e:

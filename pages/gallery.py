@@ -1,9 +1,10 @@
 import streamlit as st
-import os
 from PIL import Image
 from data.properties_data import properties
+from utils import get_image_path
 
-st.markdown("""
+st.markdown(
+    """
     <style>
         .stButton > button {
             color: #ffd700 !important;
@@ -13,18 +14,15 @@ st.markdown("""
             border-radius: 5px !important;
         }
     </style>
-""", unsafe_allow_html=True)
+""",
+    unsafe_allow_html=True,
+)
 
 st.set_page_config(page_title="EmlakHub - Home", page_icon="🏠", layout="wide")
 
 
 st.title("Gallery")
 st.write("---")
-
-
-def get_image_path(image_rel_path):
-    root_dir = os.path.dirname(os.path.dirname(__file__))
-    return os.path.join(root_dir, image_rel_path)
 
 
 if properties:
