@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(page_title="Real Estate Landing Page", page_icon="🏠", layout="wide")
+st.set_page_config(page_title="Real Estate ", page_icon="🏠", layout="wide")
 
 
 
@@ -17,7 +17,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-st.subheader("welcome to EmlakHub landing page")
+st.subheader("welcome to EmlakHub ")
 
 
 st.markdown("---")

@@ -6,7 +6,6 @@ from notifications import send_upload_confirmation
 
 st.set_page_config(page_title="نشر عقار جديد", page_icon="🏠", layout="wide")
 
-# التحقق من تسجيل الدخول
 if "logged_in" not in st.session_state or not st.session_state.logged_in:
     st.warning("⚠️ يجب عليك تسجيل الدخول أولاً لنشر عقار.")
     st.info("سيتم تحويلك لصفحة تسجيل الدخول...")

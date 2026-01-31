@@ -9,6 +9,6 @@ st.set_page_config(page_title="EmlakHub - init", page_icon="🏠", layout="wide"
 
 
 if st.session_state.logged_in:
-    st.switch_page("pages/gallery.py")
+    st.switch_page("pages/landing.py")
 else:
     st.switch_page("pages/login.py")

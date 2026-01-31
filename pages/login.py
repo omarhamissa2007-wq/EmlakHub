@@ -1,5 +1,5 @@
 import streamlit as st
-
+from data.accounts import user_accounts
 
 st.set_page_config(page_title="EmlakHub - Login", page_icon="🔑", layout="centered")
 st.title("EmlakHub - تسجيل الدخول")
@@ -12,10 +12,17 @@ with st.form("login_form"):
 
 if submit_button:
     if email and password:
-        st.session_state.logged_in = True
-        st.session_state.email = email
-        st.success("تم تسجيل الدخول بنجاح!")
-        st.switch_page("pages/gallery.py")
+
+
+        for user in user_accounts:
+            if user["email"]== email and user["password"] == password:
+                    st.session_state.logged_in = True
+                    st.session_state.email = email
+                    st.success("تم تسجيل الدخول بنجاح!")
+                    st.switch_page("pages/gallery.py")
+                    
+        else:
+            st.error("البريد الإلكتروني أو كلمة المرور غير صحيحة")
     else:
         st.error("الرجاء إدخال البريد الإلكتروني وكلمة المرور")
 

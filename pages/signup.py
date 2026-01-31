@@ -1,5 +1,5 @@
 import streamlit as st
-
+from data.accounts import user_accounts
 
 st.set_page_config(page_title="EmlakHub - SignUp", page_icon="📝", layout="centered")
 
@@ -20,6 +20,14 @@ if submit_button:
     elif password != confirm_password:
         st.error("كلمتا المرور غير متطابقتين")
     else:
+
+        user = {
+            "name" : name,
+            "email" : email,
+            "password" : password
+        }
+        user_accounts.append(user)
+
         st.success("تم إنشاء الحساب بنجاح!")
         st.session_state.logged_in = True
         st.session_state.email = email

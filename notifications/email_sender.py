@@ -6,7 +6,7 @@ from data.properties_data import properties
 
 
 SENDER_EMAIL = "emlakhub46@gmail.com"
-SENDER_PASSWORD = "hzmf omkh rtod drqk"
+SENDER_PASSWORD = "ncxs nxcm askx axpg"
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 
