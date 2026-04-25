@@ -1,4 +1,10 @@
-import pywhatkit as kit
+try:
+    import pywhatkit as kit
+    PYWHATKIT_AVAILABLE = True
+except ImportError:
+    PYWHATKIT_AVAILABLE = False
+    kit = None
+
 import streamlit as st
 import time
 from data.properties_data import properties

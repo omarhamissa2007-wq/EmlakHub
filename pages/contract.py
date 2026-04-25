@@ -13,13 +13,19 @@ st.divider()
 
 if (
     "selected_property" not in st.session_state
+    or st.session_state.selected_property is None
     or not st.session_state.selected_property
 ):
     st.warning("⚠️ لم يتم اختيار عقار. يرجى العودة إلى الصفحة الرئيسية واختيار عقار.")
+    if st.button("العودة إلى المعرض", use_container_width=True):
+        st.switch_page("pages/gallery.py")
     st.stop()
 
 property_id = st.session_state.selected_property
-property_data = properties[property_id]
+property_data = properties.get(property_id)
+if property_data is None:
+    st.error("⚠️ بيانات العقار غير متاحة.")
+    st.stop()
 
 
 col1, col2 = st.columns(2)
