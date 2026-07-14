@@ -9,7 +9,7 @@ st.title("إنشاء حساب جديد")
 with st.form("signup_form"):
     name = st.text_input("الاسم الكامل")
     email = st.text_input("البريد الإلكتروني")
-    phone = st.text_input("رقم الهاتف" ,type="numbers")
+    phone = st.text_input("رقم الهاتف")
     password = st.text_input("كلمة المرور", type="password")
     confirm_password = st.text_input("تأكيد كلمة المرور", type="password")
     submit_button = st.form_submit_button("إنشاء الحساب", use_container_width=True)
