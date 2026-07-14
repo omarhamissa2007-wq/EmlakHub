@@ -4,7 +4,6 @@ try:
 except ImportError:
     PYWHATKIT_AVAILABLE = False
     kit = None
-
 import streamlit as st
 import time
 from data.properties_data import properties
